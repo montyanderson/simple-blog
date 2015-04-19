@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My personal blog, written in Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montyanderson/blog.git"
+  },
+  "author": "Monty Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/montyanderson/blog/issues"
+  },
+  "homepage": "http://blog.montyanderson.net",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
