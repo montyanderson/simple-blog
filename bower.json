@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "homepage": "http://blog.montyanderson.net",
+  "authors": [
+    "Monty Anderson <monty.linux@gmail.com>"
+  ],
+  "description": "My personal blog, written with Node.js.",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}

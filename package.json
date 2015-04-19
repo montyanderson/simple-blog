@@ -17,6 +17,11 @@
   },
   "homepage": "http://blog.montyanderson.net",
   "dependencies": {
-    "express": "^4.12.3"
+    "ect": "^0.5.9",
+    "express": "^4.12.3",
+    "mongojs": "^0.18.2"
+  },
+  "devDependencies": {
+    "bower": "^1.4.1"
   }
 }
