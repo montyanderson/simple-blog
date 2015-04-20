@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+	font-family: "Montserrat", Helvetica, Arial;
+	text-align: center;
+
+	color: white;
+	background: #2f2f2f;
+}
+
+section {
+	display: inline-block;
+	background: #222;
+	width: 80%;
+
+	padding: 2%;
+	margin: 2%;
+
+	border-radius: 10px;
+}
+
+.title > h1 {
+	font-size: 3em;
+}
+
+.post {
+	text-align: left;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit !important;
+}

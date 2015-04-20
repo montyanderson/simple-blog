@@ -6,24 +6,28 @@
 
 		<title><%- @title %></title>
 
-		<link href="style.css" rel="stylesheet" />
-
-		<script src="jquery/dist/jquery.min.js"></script>
-		<script src="script.js"></script>
+		<link href="/style.css" rel="stylesheet" />
+		<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 	</head>
 	<body>
 
-		<h1><%- @title %></h1>
+		<section class="title">
+			<h1><a href="/"><%- @title %></a></h1>
+		</section>
 
 		<% for post in @posts : %>
-		
+
 		<section class="post">
 			<h2><%- post.title %></h2>
 
 			<p><%- post.text %></p>
 		</section>
 		<% end %>
+
+		<section id="next-page">
+			<h2><a href="/page/<%- @next %>">Next Page</a></h2>
+		</section>
 
 	</body>
 </html>

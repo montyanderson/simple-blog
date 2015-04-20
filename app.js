@@ -21,15 +21,26 @@ app.set("view engine", "ect");
 app.engine("ect", ectRenderer.render);
 
 var config = JSON.parse(fs.readFileSync("blog.json"));
+var posts = 5 /* Posts per page */
 
-app.get("/", function(req, res) {
+var page = function(req, res) {
+	if(req.params.n) {
+		var pageNumber = req.params.n;
+	} else {
+		var pageNumber = 0;
+	}
+
 	var data = config;
+	data.next = parseInt(pageNumber) + 1;
 
-	db.posts.find(function(err, docs) {
+	db.posts.find().skip(posts * pageNumber).sort({"_id": -1}).limit(posts, function(err, docs) {
 		data.posts = docs;
 		res.render("index", data);
 	});
-});
+}
+
+app.get("/", page);
+app.get("/page/:n", page);
 
 var port = 4000;
 
