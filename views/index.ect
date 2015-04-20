@@ -7,7 +7,7 @@
 		<title><%- @title %></title>
 
 		<link href="/style.css" rel="stylesheet" />
-		<link href="/font-awesome/css/buttons.min.css" rel="stylesheet" />
+		<link href="/Buttons/css/buttons.min.css" rel="stylesheet" />
 		<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 	</head>
@@ -27,7 +27,11 @@
 		<% end %>
 
 		<section id="next-page">
-			<h2><a href="/page/<%- @next %>">Next Page</a></h2>
+			<h2>
+				<a href="/page/<%- @next %>" 
+				class="button button-glow button-border button-rounded button-primary">
+				Next Page </a>
+			</h2>
 		</section>
 
 	</body>
