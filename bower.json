@@ -16,5 +16,7 @@
     "tests"
   ],
   "dependencies": {
+    "Buttons": "~2.0.0",
+    "fontawesome": "~4.3.0"
   }
 }
