@@ -56,32 +56,6 @@ var page = function(req, res) {
 app.get("/", page);
 app.get("/page/:n", page);
 
-app.get("/new", function(req, res) {
-	res.render("new", config);
-});
-
-app.post("/post", function(req, res) {
-	fs.readFile(".passwd", function(error, data) {
-		if(!error) {
-			if(req.body.password == data) {
-				var date = new Date();
-				var dateStr = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
-
-				db.posts.insert({
-					"title": req.body.name,
-					"url": req.body.url,
-					"text": req.body.text,
-					"date": dateStr
-				});
-			} else {
-				res.write("Error: Bad Password");
-			}
-		}
-
-		res.end();
-	});
-});
-
 var port = 4000;
 
 app.listen(port);
